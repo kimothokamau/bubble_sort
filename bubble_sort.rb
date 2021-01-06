@@ -34,9 +34,9 @@ array = %w[hi hello hey]
 array_digits = [5, 6, 3, 7, 3, 1, 9, 1]
 
 # TESTING METHOD 1 - bubble_sort
-puts bubble_sort(array_digits)
+p bubble_sort(array_digits)
 # TESTING METHOD 2 - bubble_sort_by for words
-puts bubble_sort_by(array) { |left, right| left.length - right.length }
+p bubble_sort_by(array) { |left, right| left.length - right.length }
 
 # TESTING METHOD 2 - bubble_sort_by for digits
-puts bubble_sort_by(array_digits) { |left, right| left - right }
+p bubble_sort_by(array_digits) { |left, right| left - right }
