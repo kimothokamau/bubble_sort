@@ -1,4 +1,3 @@
-array = [5, 6, 3, 7, 3, 1, 9, 1]
 def bubble_sort(array)
   n = array.length - 1
   swapped = true
@@ -13,7 +12,6 @@ def bubble_sort(array)
   end
   array
 end
-bubble_sort(array)
 
 def bubble_sort_by(arr)
   puts arr if arr.length <= 1
@@ -32,10 +30,13 @@ def bubble_sort_by(arr)
   arr
 end
 
-bubble_sort_by %w[hi hello hey] do |left, right|
-  left.length - right.length
-end
+array = %w[hi hello hey]
+array_digits = [5, 6, 3, 7, 3, 1, 9, 1]
 
-bubble_sort_by([5, 6, 3, 7, 3, 1, 9, 1]) do |left, right|
-  left - right
-end
+# TESTING METHOD 1 - bubble_sort
+puts bubble_sort(array_digits)
+# TESTING METHOD 2 - bubble_sort_by for words
+puts bubble_sort_by(array) { |left, right| left.length - right.length }
+
+# TESTING METHOD 2 - bubble_sort_by for digits
+puts bubble_sort_by(array_digits) { |left, right| left - right }
